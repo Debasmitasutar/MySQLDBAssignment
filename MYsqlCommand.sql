@@ -8,7 +8,7 @@ CREATE TABLE employee_payroll(id INT Not null auto_increment,
                     PRIMARY KEY(id));
  DROP TABLE employee_payroll;
  DESCRIBE employee_payroll;
- INSERT INTO employee_payroll (name,salary,start) VALUES
+
              ('Dipti',70000.00,'2023-04-19'),
              ('Sarika',50000.00,'2023-02-16'),
              ('Deba',30000.00,'2023-02-13');
@@ -19,6 +19,9 @@ INSERT INTO employee_payroll (name,salary,start) VALUES
                    ('Dipti',70000.00,'2023-04-19');
 SELECT * FROM employee_payroll
   WHERE start BETWEEN cast('2018-01-18' AS DATE) AND DATE (NOW());
+ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
+UPDATE employee_payroll set gender = 'F' WHERE id=7;  
+  
   
                  
             
