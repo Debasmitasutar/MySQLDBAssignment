@@ -20,7 +20,14 @@ INSERT INTO employee_payroll (name,salary,start) VALUES
 SELECT * FROM employee_payroll
   WHERE start BETWEEN cast('2018-01-18' AS DATE) AND DATE (NOW());
 ALTER TABLE employee_payroll ADD gender CHAR(1) AFTER name;
-UPDATE employee_payroll set gender = 'F' WHERE id=7;  
+UPDATE employee_payroll set gender = 'M' WHERE id=9;
+SELECT SUM(salary) FROM employee_payroll WHERE gender='F' GROUP BY gender; 
+SELECT AVG(salary) FROM employee_payroll WHERE gender='F' GROUP BY gender; 
+SELECT MAX(salary) FROM employee_payroll WHERE gender='F' GROUP BY gender; 
+SELECT MIN(salary) FROM employee_payroll WHERE gender='F' GROUP BY gender;
+SELECT COUNT(salary) FROM employee_payroll WHERE gender='F' GROUP BY gender;
+ 
+  
   
   
                  
