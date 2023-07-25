@@ -12,5 +12,6 @@ CREATE TABLE employee_payroll(id INT Not null auto_increment,
              ('Dipti',70000.00,'2023-04-19'),
              ('Sarika',50000.00,'2023-02-16'),
              ('Deba',30000.00,'2023-02-13');
+SELECT * FROM employee_payroll;
              
              
